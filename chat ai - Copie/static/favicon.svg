@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#122033"/>
+      <stop offset="1" stop-color="#0a1422"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4fd1c5"/>
+      <stop offset="0.6" stop-color="#7aa2ff"/>
+      <stop offset="1" stop-color="#9e69ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bg)"/>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#accent)" opacity="0.12"/>
+
+  <g opacity="0.55" filter="url(#glow)">
+    <circle cx="46" cy="44" r="16" fill="none" stroke="#4fd1c5" stroke-width="2"/>
+    <circle cx="78" cy="70" r="18" fill="none" stroke="#7aa2ff" stroke-width="2"/>
+    <path d="M38 76 L90 36" stroke="#9e69ff" stroke-width="2" opacity="0.7"/>
+    <path d="M34 60 L64 88" stroke="#4fd1c5" stroke-width="1.6" opacity="0.7"/>
+  </g>
+
+  <g font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="34" fill="#e8f7ff">
+    <text x="34" y="74" transform="skewX(-6)">WB</text>
+  </g>
+  <g font-family="Space Grotesk, Arial, sans-serif" font-weight="500" font-size="16" fill="#c9d8ff">
+    <text x="78" y="96" transform="skewX(-6)">AI</text>
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WB AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v=1">
+    <link rel="icon" href="/static/favicon.ico?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body>
+    <div class="bg"></div>
+
+    <main class="app-shell">
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-mark" aria-label="WB AI logo">
+                    <span class="mesh" aria-hidden="true"></span>
+                    <span class="brand-wb">WB</span>
+                    <span class="brand-ai">AI</span>
+                </div>
+                <div class="brand-text">
+                    <div class="brand-title">WB AI</div>
+                    <div class="brand-sub">Intelligent Chat</div>
+                </div>
+            </div>
+            <button class="new-chat-btn" id="resetBtn" type="button">
+                <span class="new-chat-icon" aria-hidden="true">＋</span>
+                New Conversation
+            </button>
+        </header>
+        
+        <section class="chat-area">
+            <div class="welcome-message" id="welcome-message">
+                <h1>Your intelligent assistant is ready.</h1>
+                <p>Ask anything. Get clear, accurate answers.</p>
+                <div class="quick-actions" aria-label="Quick prompts">
+                    <button class="quick-action" type="button" data-prompt="Summarize my notes into key action items.">Summarize notes</button>
+                    <button class="quick-action" type="button" data-prompt="Draft a professional email reply for a client update.">Draft email</button>
+                    <button class="quick-action" type="button" data-prompt="Give me a clear step-by-step plan to reach my goal.">Plan steps</button>
+                    <button class="quick-action" type="button" data-prompt="Translate this to Arabic with a natural tone.">Translate</button>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chatStream">
+                <div class="thinking-indicator" id="thinkingIndicator">Thinking…</div>
+            </div>
+        </section>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="input-container">
+            <div class="glass-input-bar">
+                <input type="text" placeholder="Ask anything..." class="message-input" id="messageInput">
+                <button class="mic-button" id="micBtn" type="button">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="send-button" id="sendBtn" type="button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="voice-status" id="voiceStatus"></div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
