@@ -6,15 +6,18 @@
       "use": "@vercel/python"
     }
   ],
-  "functions": {
-    "api/index.py": {
-      "includeFiles": "static/**"
-    }
-  },
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "api/index.py"
+    },
+    {
+      "source": "/",
+      "destination": "static/index.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/api/index.py"
+      "destination": "static/$1"
     }
   ]
 }
